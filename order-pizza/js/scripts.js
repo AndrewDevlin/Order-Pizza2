@@ -33,6 +33,8 @@ $(document).ready(function() {
     var inputtedsize = $("input:radio[name=size]:checked").val();
     newPizza = new Pizza(inputtedtop, inputtedsize);
 
+    $("#your-order").show();
+
     alert(newPizza.pizzaSize);
     alert(newPizza.pizzaToppings);
     alert(newPizza.price());
