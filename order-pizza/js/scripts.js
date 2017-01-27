@@ -1,40 +1,35 @@
-// business logic
 function Pizza(toppings, size) {
   this.pizzaToppings = toppings;
   this.pizzaSize = size;
 }
 
-Pizza.prototype.price = function() {
-  var total = 0
+Pizza.prototype.pizzaPrice = function() {
+  var sizePrice = 0
   if (newPizza.pizzaSize === 'small') {
-    total = 5
+    sizePrice = 5
   }
   else if (newPizza.pizzaSize === 'medium') {
-    total = 10
+    sizePrice = 10
   }
   else {
-    total = 15
+    sizePrice = 15
   }
-  return this.pizzaToppings.length + total;
+  return this.pizzaToppings.length + sizePrice;
 }
 
-
-
-//user interface
 $(document).ready(function() {
   $("form#order").submit(function(event) {
     event.preventDefault();
 
-    var inputtedtop = []
+    var inputtedToppings = []
     $("input:checkbox[name=topping]:checked").each(function() {
        var toppingsInArray = $(this).val();
-       inputtedtop.push(toppingsInArray);
+       inputtedToppings.push(toppingsInArray);
     });
-    var inputtedsize = $("input:radio[name=size]:checked").val();
-    newPizza = new Pizza(inputtedtop, inputtedsize);
+    var inputtedSize = $("input:radio[name=size]:checked").val();
+    newPizza = new Pizza(inputtedToppings, inputtedSize);
 
     $("#your-order").show();
-    $("#your-order").append("<li>" + "Size: " + newPizza.pizzaSize + "</li>" + "<li>" + "Toppings:" + newPizza.pizzaToppings + "</li>" + "<li>Total: $" + newPizza.price() + "</li>");
+    $("#your-order").append("<li>" + "Size: " + newPizza.pizzaSize + "</li>" + "<li>" + "Toppings:" + newPizza.pizzaToppings + "</li>" + "<li>Total: $" + newPizza.pizzaPrice() + "</li>");
   });
-
 });
