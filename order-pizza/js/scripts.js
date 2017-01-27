@@ -29,7 +29,11 @@ $(document).ready(function() {
   $("form#order").submit(function(event) {
     event.preventDefault();
 
-    var inputtedtop = ['top', 'pop']
+    var inputtedtop = []
+    $("input:checkbox[name=topping]:checked").each(function() {
+       var toppingsInArray = $(this).val();
+       inputtedtop.push(toppingsInArray);
+    });
     var inputtedsize = $("input:radio[name=size]:checked").val();
     newPizza = new Pizza(inputtedtop, inputtedsize);
 
