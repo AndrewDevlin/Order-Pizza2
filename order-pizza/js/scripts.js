@@ -1,6 +1,4 @@
 // business logic
-
-
 function Pizza(toppings, size) {
   this.pizzaToppings = toppings;
   this.pizzaSize = size;
@@ -8,10 +6,10 @@ function Pizza(toppings, size) {
 
 function sizePrice() {
   var total = 0
-  if (newPizza.pizzaSize === 's') {
+  if (newPizza.pizzaSize === 'small') {
     total = 5
   }
-  else if (newPizza.pizzaSize === 'm') {
+  else if (newPizza.pizzaSize === 'medium') {
     total = 10
   }
   else {
@@ -24,12 +22,20 @@ Pizza.prototype.price = function() {
   return this.pizzaToppings.length + sizePrice();
 }
 
+
+
 //user interface
-var inputtedtop = ['top', 'pop']
-var inputtedsize ='l'
+$(document).ready(function() {
+  $("form#order").submit(function(event) {
+    event.preventDefault();
 
-var newPizza = new Pizza(inputtedtop, inputtedsize);
+    var inputtedtop = ['top', 'pop']
+    var inputtedsize = $("input:radio[name=size]:checked").val();
+    newPizza = new Pizza(inputtedtop, inputtedsize);
 
-alert(newPizza.pizzaSize);
-alert(newPizza.pizzaToppings);
-alert(newPizza.price());
+    alert(newPizza.pizzaSize);
+    alert(newPizza.pizzaToppings);
+    alert(newPizza.price());
+  });
+
+});
