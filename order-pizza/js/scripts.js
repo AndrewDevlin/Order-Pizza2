@@ -34,10 +34,7 @@ $(document).ready(function() {
     newPizza = new Pizza(inputtedtop, inputtedsize);
 
     $("#your-order").show();
-
-    alert(newPizza.pizzaSize);
-    alert(newPizza.pizzaToppings);
-    alert(newPizza.price());
+    $("#your-order").append("<li>" + "Size: " + newPizza.pizzaSize + "</li>" + "<li>" + "Toppings:" + newPizza.pizzaToppings + "</li>" + "<li>Total: $" + newPizza.price() + "</li>");
   });
 
 });
