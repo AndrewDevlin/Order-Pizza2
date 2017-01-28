@@ -30,6 +30,6 @@ $(document).ready(function() {
     newPizza = new Pizza(inputtedToppings, inputtedSize);
 
     $("#your-order").show();
-    $("#your-order").append("<li>" + "Size: " + newPizza.pizzaSize + "</li>" + "<li>" + "Toppings:" + newPizza.pizzaToppings + "</li>" + "<li>Total: $" + newPizza.pizzaPrice() + "</li>");
+    $("#your-order").append("<li>" + "Size: " + newPizza.pizzaSize + "</li>" + "<li>" + "Toppings:" + newPizza.pizzaToppings + "</li>" + "<li>Total: $" + newPizza.pizzaPrice() + "</li>" + "<li>" + "</li>");
   });
 });
