@@ -18,7 +18,9 @@ Pizza.prototype.pizzaPrice = function() {
 }
 
 $(document).ready(function() {
+
   var totalPrice = 0;
+
   $("form#order").submit(function(event) {
     event.preventDefault();
 

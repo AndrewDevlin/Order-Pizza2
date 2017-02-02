@@ -13,15 +13,11 @@ This site takes a pizza order. The user can choose a size and multiple toppings.
 
 ##Specifications:
 
-* Radio buttons and check boxes are used to ensure only the desired form information is input.
-
-* One pizza size is selected with a radio button.
-
-* One or more toppings are selected with a checklist.
-
-* The button is clicked to place an order.
-
-* The size, toppings, and price of the pizza appear on the page.
+| Behavior  our program should handle:|Input:|Output:|
+| --- | --- | --- |
+|It takes in one size with a radio button and toppings with a checklist.   It returns the selected size, the price of the order and a running total.|small|Size:small Total:$6; Your total:$6|
+|It takes in one or more toppings with a checklist. Then returns the selected toppings with one dollar added to the price for each topping.| medium; sausage |Size:medium; Toppings:sausage; total:$11; Your total:$11|
+|For each additional order it adds the information below the previous order and updates the running total.| large; cheese, mushroom |Size:Large; Toppings:cheese, mushroom; total:$17; Your total:$28
 
 ##Process:
 
