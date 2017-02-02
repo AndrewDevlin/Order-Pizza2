@@ -9,7 +9,7 @@ This site takes a pizza order. The user can choose a size and multiple toppings.
 ## Setup/Installation Requirements
 
 * Clone this repository and open index.html in your browser.
-* [Click here to see the site.](https://AndrewDevlin.github.io/Order-Pizza)
+* [Click here to see the site.](https://AndrewDevlin.github.io/Order-Pizza2)
 
 ##Specifications:
 
